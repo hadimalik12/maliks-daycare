@@ -7,24 +7,28 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const previews = [
   {
-    src: `${basePath}/images/art-preview.jpg?v=2`,
-    alt: "Malik's Daycare playroom with colorful floor mats",
-  },
-  {
-    src: `${basePath}/images/playroom-preview.jpg?v=2`,
+    src: `${basePath}/images/playroom-wide.jpg?v=3`,
     alt: "Malik's Daycare playroom with books, toys, and activity mats",
+    width: 2048,
+    height: 1536,
   },
   {
-    src: `${basePath}/images/blocks-preview.jpg?v=2`,
-    alt: "Malik's Daycare toy shelves and colorful learning rug",
+    src: `${basePath}/images/playroom-learning-wall.jpg?v=3`,
+    alt: "Malik's Daycare playroom with colorful learning wall and alphabet rug",
+    width: 1536,
+    height: 2048,
   },
   {
-    src: `${basePath}/images/reading-preview.jpg?v=2`,
-    alt: "Quiet rest room at Malik's Daycare",
+    src: `${basePath}/images/nap-room.jpg?v=3`,
+    alt: "Quiet nap and rest room at Malik's Daycare",
+    width: 2048,
+    height: 1536,
   },
   {
-    src: `${basePath}/images/outdoor-preview.jpg?v=2`,
+    src: `${basePath}/images/outdoor-play-area.jpg?v=3`,
     alt: "Outdoor play area at Malik's Daycare",
+    width: 2048,
+    height: 1536,
   },
 ];
 
@@ -69,8 +73,8 @@ export function PhotoStack() {
                 <img
                   src={photo.src}
                   alt={depth === 0 ? photo.alt : ""}
-                  width="1000"
-                  height="750"
+                  width={photo.width}
+                  height={photo.height}
                   loading="lazy"
                   decoding="async"
                   draggable={false}
@@ -95,8 +99,8 @@ export function PhotoStack() {
               <img
                 src={previews[previous].src}
                 alt=""
-                width="1000"
-                height="750"
+                width={previews[previous].width}
+                height={previews[previous].height}
                 draggable={false}
               />
               <span className="photo-stack-label">Malik&apos;s Daycare</span>

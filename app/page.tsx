@@ -396,10 +396,10 @@ export default function Home() {
             <div className="hero-visual">
               <figure className="preview-photo hero-photo">
                 <img
-                  src={`${basePath}/images/playroom-preview.jpg?v=2`}
+                  src={`${basePath}/images/playroom-wide.jpg?v=3`}
                   alt="Malik's Daycare playroom with colorful mats, books, and toys"
-                  width="1800"
-                  height="1100"
+                  width="2048"
+                  height="1536"
                   fetchPriority="high"
                 />
                 <figcaption>Inside Malik&apos;s Daycare</figcaption>
@@ -627,10 +627,10 @@ export default function Home() {
               <div className="day-aside">
                 <figure className="preview-photo outdoor-photo">
                   <img
-                    src={`${basePath}/images/outdoor-preview.jpg?v=2`}
+                    src={`${basePath}/images/outdoor-play-area.jpg?v=3`}
                     alt="Malik's Daycare outdoor play area with slides and a basketball hoop"
-                    width="1000"
-                    height="750"
+                    width="2048"
+                    height="1536"
                     loading="lazy"
                   />
                   <figcaption>Outdoor play area</figcaption>
