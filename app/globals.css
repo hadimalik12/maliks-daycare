@@ -423,17 +423,76 @@ dd {
   background: #26332ff0;
   border-radius: 8px;
   padding: 5px 9px;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.45;
 }
 .hero-photo {
   border: 6px solid white;
   box-shadow: 0 6px 28px #26332f12;
   border-radius: 30px 30px 14px 14px;
+  aspect-ratio: 5 / 4;
+  touch-action: pan-y;
 }
 .hero-photo img {
-  aspect-ratio: 5 / 4;
+  position: absolute;
+  inset: 0;
   object-position: 63% center;
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+.hero-photo img[data-active="true"] {
+  opacity: 1;
+}
+.photo-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #ffffffb8;
+  border-radius: 50%;
+  color: var(--ink);
+  background: #fffefae8;
+  box-shadow: 0 3px 12px #26332f26;
+  transform: translateY(-50%);
+}
+.photo-gallery-previous {
+  left: 14px;
+}
+.photo-gallery-next {
+  right: 14px;
+}
+.photo-gallery-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 42px;
+  padding: 8px 12px 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.photo-gallery-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.photo-gallery-dots button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #bbc3be;
+}
+.photo-gallery-dots button[aria-current="true"] {
+  width: 30px;
+  border-radius: 999px;
+  background: var(--blue);
 }
 .small-group-note {
   display: flex;
@@ -711,15 +770,9 @@ dd {
 .day-aside {
   min-width: 0;
 }
-.outdoor-photo {
-  border-radius: 26px 26px 0 0;
-}
-.outdoor-photo img {
-  aspect-ratio: 4 / 3;
-}
 .play-note {
   background: var(--yellow);
-  border-radius: 0 0 26px 26px;
+  border-radius: 26px;
   padding: 26px;
 }
 .play-note > svg {
@@ -976,6 +1029,13 @@ dd {
   .mobile-nav a:hover {
     background: var(--sky);
   }
+  .photo-gallery-arrow:hover {
+    color: white;
+    background: var(--blue);
+  }
+  .photo-gallery-dots button:hover {
+    background: var(--red);
+  }
 }
 @media (min-width: 600px) {
   .container {
@@ -1054,6 +1114,9 @@ dd {
     padding-block: 56px;
   }
   .hero-photo img {
+    object-position: center;
+  }
+  .hero-photo {
     aspect-ratio: 1.12;
   }
   .facts-inner {

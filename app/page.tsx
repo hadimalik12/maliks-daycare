@@ -22,10 +22,9 @@ import {
   Users,
 } from "lucide-react";
 import { CalendlyBooking, BOOKING_URL } from "./calendly-booking";
+import { PhotoGallery } from "./photo-gallery";
 import { PhoneContact } from "./phone-contact";
 import { goToPageTop, resetInitialScroll } from "./scroll-navigation";
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const navigation = [
   ["#about", "Why Malik's Daycare"],
@@ -394,15 +393,7 @@ export default function Home() {
               </a>
             </div>
             <div className="hero-visual">
-              <figure className="preview-photo hero-photo">
-                <img
-                  src={`${basePath}/images/playroom-wide.jpg?v=3`}
-                  alt="Malik's Daycare playroom with colorful mats, books, and toys"
-                  width="2048"
-                  height="1536"
-                  fetchPriority="high"
-                />
-              </figure>
+              <PhotoGallery />
               <div className="small-group-note">
                 <span className="group-icon">
                   <Users size={28} aria-hidden="true" />
@@ -624,15 +615,6 @@ export default function Home() {
                 })}
               </ol>
               <div className="day-aside">
-                <figure className="preview-photo outdoor-photo">
-                  <img
-                    src={`${basePath}/images/outdoor-play-area.jpg?v=3`}
-                    alt="Malik's Daycare outdoor play area with slides and a basketball hoop"
-                    width="2048"
-                    height="1536"
-                    loading="lazy"
-                  />
-                </figure>
                 <div className="play-note">
                   <Sun size={30} aria-hidden="true" />
                   <h3>Room for the wiggles.</h3>
