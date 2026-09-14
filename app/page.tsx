@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
+
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
@@ -25,6 +27,8 @@ import { CalendlyBooking, BOOKING_URL } from "./calendly-booking";
 import { PhotoGallery } from "./photo-gallery";
 import { PhoneContact } from "./phone-contact";
 import { goToPageTop, resetInitialScroll } from "./scroll-navigation";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const navigation = [
   ["#about", "Why Malik's Daycare"],
@@ -615,6 +619,16 @@ export default function Home() {
                 })}
               </ol>
               <div className="day-aside">
+                <figure className="preview-photo outdoor-photo">
+                  <img
+                    src={`${basePath}/images/outdoor-play-area.jpg?v=3`}
+                    alt="Malik's Daycare outdoor play area with slides and a basketball hoop"
+                    width="2048"
+                    height="1536"
+                    loading="lazy"
+                  />
+                  <figcaption>Outdoor play area</figcaption>
+                </figure>
                 <div className="play-note">
                   <Sun size={30} aria-hidden="true" />
                   <h3>Room for the wiggles.</h3>

@@ -770,9 +770,15 @@ dd {
 .day-aside {
   min-width: 0;
 }
+.outdoor-photo {
+  border-radius: 26px 26px 0 0;
+}
+.outdoor-photo img {
+  aspect-ratio: 4 / 3;
+}
 .play-note {
   background: var(--yellow);
-  border-radius: 26px;
+  border-radius: 0 0 26px 26px;
   padding: 26px;
 }
 .play-note > svg {
