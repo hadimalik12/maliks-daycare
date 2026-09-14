@@ -79,7 +79,6 @@ export function PhotoStack() {
                   decoding="async"
                   draggable={false}
                 />
-                <span className="photo-stack-label">Malik&apos;s Daycare</span>
               </span>
             );
           })}
@@ -103,7 +102,6 @@ export function PhotoStack() {
                 height={previews[previous].height}
                 draggable={false}
               />
-              <span className="photo-stack-label">Malik&apos;s Daycare</span>
             </span>
           )}
         </div>

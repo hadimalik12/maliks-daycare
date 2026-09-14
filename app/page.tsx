@@ -402,7 +402,6 @@ export default function Home() {
                   height="1536"
                   fetchPriority="high"
                 />
-                <figcaption>Inside Malik&apos;s Daycare</figcaption>
               </figure>
               <div className="small-group-note">
                 <span className="group-icon">
@@ -633,7 +632,6 @@ export default function Home() {
                     height="1536"
                     loading="lazy"
                   />
-                  <figcaption>Outdoor play area</figcaption>
                 </figure>
                 <div className="play-note">
                   <Sun size={30} aria-hidden="true" />
