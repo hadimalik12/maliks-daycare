@@ -1,8 +1,9 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
+
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -71,7 +72,7 @@ export function PhotoGallery() {
     >
       <figure className="preview-photo hero-photo">
         {photos.map((photo, photoIndex) => (
-          <Image
+          <img
             key={photo.src}
             className="photo-gallery-image"
             src={photo.src}
