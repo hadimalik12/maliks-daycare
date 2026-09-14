@@ -397,12 +397,12 @@ export default function Home() {
               <figure className="preview-photo hero-photo">
                 <img
                   src={`${basePath}/images/playroom-preview.jpg?v=2`}
-                  alt="Preview of a bright playroom with toys and books; not Malik's Daycare's actual space"
+                  alt="Malik's Daycare playroom with colorful mats, books, and toys"
                   width="1800"
                   height="1100"
                   fetchPriority="high"
                 />
-                <figcaption>Preview image · not the actual daycare</figcaption>
+                <figcaption>Inside Malik&apos;s Daycare</figcaption>
               </figure>
               <div className="small-group-note">
                 <span className="group-icon">
@@ -628,14 +628,12 @@ export default function Home() {
                 <figure className="preview-photo outdoor-photo">
                   <img
                     src={`${basePath}/images/outdoor-preview.jpg?v=2`}
-                    alt="Preview of an outdoor childcare play area; not Malik's Daycare's actual outdoor space"
+                    alt="Malik's Daycare outdoor play area with slides and a basketball hoop"
                     width="1000"
                     height="750"
                     loading="lazy"
                   />
-                  <figcaption>
-                    Preview image · not the actual daycare
-                  </figcaption>
+                  <figcaption>Outdoor play area</figcaption>
                 </figure>
                 <div className="play-note">
                   <Sun size={30} aria-hidden="true" />
@@ -740,7 +738,7 @@ export default function Home() {
         </div>
         <div className="container footer-bottom">
           <span>&copy; {new Date().getFullYear()} Malik&apos;s Daycare</span>
-          <span>Photos are previews, not the actual daycare.</span>
+          <span>Warm home daycare in Lawrenceville, Georgia.</span>
         </div>
       </footer>
       <div

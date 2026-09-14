@@ -8,23 +8,23 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const previews = [
   {
     src: `${basePath}/images/art-preview.jpg?v=2`,
-    alt: "Children exploring paint together",
+    alt: "Malik's Daycare playroom with colorful floor mats",
   },
   {
     src: `${basePath}/images/playroom-preview.jpg?v=2`,
-    alt: "A bright playroom with toys and books",
+    alt: "Malik's Daycare playroom with books, toys, and activity mats",
   },
   {
     src: `${basePath}/images/blocks-preview.jpg?v=2`,
-    alt: "Children building with wooden blocks",
+    alt: "Malik's Daycare toy shelves and colorful learning rug",
   },
   {
     src: `${basePath}/images/reading-preview.jpg?v=2`,
-    alt: "A child sharing a storybook with an adult",
+    alt: "Quiet rest room at Malik's Daycare",
   },
   {
     src: `${basePath}/images/outdoor-preview.jpg?v=2`,
-    alt: "An outdoor childcare play space",
+    alt: "Outdoor play area at Malik's Daycare",
   },
 ];
 
@@ -75,7 +75,7 @@ export function PhotoStack() {
                   decoding="async"
                   draggable={false}
                 />
-                <span className="photo-stack-label">Preview image</span>
+                <span className="photo-stack-label">Malik&apos;s Daycare</span>
               </span>
             );
           })}
@@ -99,7 +99,7 @@ export function PhotoStack() {
                 height="750"
                 draggable={false}
               />
-              <span className="photo-stack-label">Preview image</span>
+              <span className="photo-stack-label">Malik&apos;s Daycare</span>
             </span>
           )}
         </div>
