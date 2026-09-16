@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fredoka } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+const googleAnalyticsId = "G-EPJBPTB7L2";
 
 const bodyFont = DM_Sans({
   variable: "--font-body",
@@ -30,6 +33,18 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${googleAnalyticsId}');
+        `}
+      </Script>
     </html>
   );
 }
