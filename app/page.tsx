@@ -365,13 +365,14 @@ export default function Home() {
                 Lawrenceville, Georgia
               </p>
               <h1 id="hero-title">
-                Little group.
+                Licensed home daycare.
                 <br />
                 <span className="text-red">Whole lot of care.</span>
               </h1>
               <p className="hero-description">
-                A small, licensed home daycare where your child is known,
-                comforted, and encouraged, one little moment at a time.
+                A small family childcare setting where infants, toddlers, and
+                preschoolers are known, comforted, and encouraged, one little
+                moment at a time.
               </p>
               <p className="hero-detail">
                 Warm care. Personal attention. A familiar rhythm of play, meals,
@@ -452,9 +453,9 @@ export default function Home() {
                 </h2>
               </div>
               <p>
-                You want to leave knowing your child is in caring hands. At
-                Malik&apos;s Daycare, a smaller home setting brings together the
-                warmth they need and the trust you need.
+                You want to leave knowing your child is in caring hands. At our
+                licensed Lawrenceville home daycare, a smaller setting brings
+                together the warmth they need and the trust you need.
               </p>
             </div>
             <div className="reasons-grid">
@@ -534,8 +535,8 @@ export default function Home() {
                 <span className="text-blue">Their next little step.</span>
               </h2>
               <p>
-                One welcoming home, with care that makes room for different
-                ages, needs, and new discoveries.
+                Infant, toddler, and preschool care in one welcoming home, with
+                room for different ages, needs, and new discoveries.
               </p>
             </div>
             <div className="program-grid">

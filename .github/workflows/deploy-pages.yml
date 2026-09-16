@@ -36,7 +36,8 @@ jobs:
       - name: Build site
         run: npm run build:github
         env:
-          NEXT_PUBLIC_BASE_PATH: /maliks-daycare
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://hadimalik12.github.io/maliks-daycare' }}
+          SITE_BASE_PATH: ${{ vars.SITE_BASE_PATH || '/maliks-daycare' }}
 
       - name: Preserve Next.js assets
         run: |
