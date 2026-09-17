@@ -1,4 +1,4 @@
-const defaultSiteUrl = "https://hadimalik12.github.io/maliks-daycare";
+const defaultSiteUrl = "https://maliksdaycare.com";
 
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl
