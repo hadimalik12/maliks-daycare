@@ -36,7 +36,7 @@ jobs:
       - name: Build site
         run: npm run build:github
         env:
-          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://maliksdaycare.com' }}
+          NEXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL || 'https://www.maliksdaycare.com' }}
           # maliksdaycare.com is a custom domain, so the published site lives
           # at its root rather than under the repository name.
           SITE_BASE_PATH: ''

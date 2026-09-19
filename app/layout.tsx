@@ -95,19 +95,18 @@ export default function RootLayout({
       <body
         className={`${bodyFont.variable} ${displayFont.variable} antialiased`}
       >
+        <script
+          id="local-business-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessStructuredData).replace(
+              /</g,
+              "\\u003c",
+            ),
+          }}
+        />
         {children}
       </body>
-      <Script
-        id="local-business-structured-data"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessStructuredData).replace(
-            /</g,
-            "\\u003c",
-          ),
-        }}
-      />
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
         strategy="afterInteractive"
